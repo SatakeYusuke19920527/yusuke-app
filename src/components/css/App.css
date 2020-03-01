@@ -1,7 +1,7 @@
 .wrapper {
   background-color: #282c34;
   min-height: 100vh;
-  text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -15,10 +15,6 @@
   }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,4 +22,92 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  width: 70%;
+  text-align: center;
+}
+
+.sidebar {
+  width: 30%;
+  text-align: center;
+  border-right: 5px solid rgb(0, 195, 255);
+}
+
+.logo_area {
+  width: 100%;
+  padding: 3em 0;
+}
+
+.logo_area h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.archive_area {
+  width: 100%;
+  height: 100%;
+}
+
+.archive {
+  display: block;
+  width: 90%;
+  border: 1px solid #fff;
+  text-align: left;
+  padding: 0 2em;
+  box-sizing: border-box;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.archive .text_area {
+  font-size: 1.4rem;
+  border-bottom: 1px solid #fff;
+}
+
+.archive .context_area {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.circle_button {
+  position: relative;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgb(0, 195, 255);
+  bottom: 20px;
+  right: 20px;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+
+.circle_button:hover {
+  background-color: rgb(0, 255, 255);
+  transition: all 0.4s;
+}
+
+.icon{
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  margin: auto;
+}
+
+.title_block{
+  width: 100%;
+}
+
+.title_block h3{
+  font-size: 2rem;
+  color: #fff;
+}
+
+.pic_block{
+  margin: 3em 0;
 }
