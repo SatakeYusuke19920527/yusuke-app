@@ -1,38 +1,23 @@
 import React from 'react'
-import logo from '../../logo.svg'
 import '../css/App.css'
+import Sidebar from './Sidebar'
+import CircleButton from './CircleButton'
+import Main from './Main'
+import dummy from '../../dummy'
+
+import AppContext from '../../contexts/AppContext'
 
 class App extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      count: 0
-    }
-  }
-
-  render () {
+  render() {
     return (
-      <div className='wrapper'>
-        <div className='sidebar'>
-          <img src={logo} className='App-logo' alt='logo' />
+      <AppContext.Provider value={dummy}>
+        <div className='wrapper'>
+          <Sidebar />
+          <Main />
+          <CircleButton />
         </div>
-        <h1>{this.state.count}</h1>
-        <button
-          onClick={() => {
-            this.setState({ count: this.state.count + 1 })
-          }}
-        >
-          +
-        </button>
-        <button
-          onClick={() => {
-            this.setState({ count: this.state.count - 1 })
-          }}
-        >
-          -
-        </button>
-      </div>
-    )
+      </AppContext.Provider>
+    );
   }
 }
 
